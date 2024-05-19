@@ -123,6 +123,5 @@ añadir sólo dos imagenes */
         // Añadir el formulario al contenedor 'destinos'
         crearElemento(formulario, contenedorDestinos);
     } else {
-        console.error("No se encontró la id destinos");
     }
 
