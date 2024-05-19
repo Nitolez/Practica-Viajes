@@ -60,7 +60,7 @@ añadir sólo dos imagenes */
     const idVallecas = document.querySelector('#vallecas')
     const imagenVallecas = document.createElement("img")
     let indiceVallecas = 0
-    //Hago una funcion para que la source cambie en función del indice del array
+    //Hago una funcion para cambiar la source cambie en función del indice del array
     function cambiarImagenArray(){
         imagenVallecas.src = arrayVallecas[indiceVallecas]
     }
@@ -77,4 +77,52 @@ añadir sólo dos imagenes */
         //invocamos la función
         cambiarImagenArray()
     })
+
+//Añadir una lista de opciones al final de la pagina
+    // Crear y configurar los elementos
+    const formulario = document.createElement("form");
+    // Añadir atributos al formulario
+    formulario.setAttribute("action", "enviar_formulario.php");
+    formulario.setAttribute("method", "get");
+
+    const label = document.createElement("label");
+    label.setAttribute("for", "destino");
+
+    const input = document.createElement("input");
+    input.setAttribute("type", "text");
+    input.setAttribute("list", "listaDestinos");
+    input.setAttribute("id", "destino");
+    input.setAttribute("name", "destino");
+    input.setAttribute("required", true);
+
+    const datalist = document.createElement("datalist");
+    datalist.setAttribute("id", "listaDestinos");
+
+    // Añadir las opciones a la datalist
+    const opciones = ["Canarias", "Punta Cana", "Vallecas"];
+    opciones.forEach(opcion => {
+        const option = document.createElement("option");
+        option.value = opcion;
+        datalist.appendChild(option);
+    });
+
+    // Asegúrate de que el contenedor 'destinos' existe en el DOM
+    const contenedorDestinos = document.querySelector("#destinos");
+
+    if (contenedorDestinos) {
+        // Función para añadir un elemento a un contenedor
+        function crearElemento(elemento, contenedor) {
+            contenedor.appendChild(elemento);
+        }
+
+        // Añadir elementos al formulario
+        formulario.appendChild(label);
+        formulario.appendChild(input);
+        formulario.appendChild(datalist);
+
+        // Añadir el formulario al contenedor 'destinos'
+        crearElemento(formulario, contenedorDestinos);
+    } else {
+        console.error("No se encontró la id destinos");
+    }
 
