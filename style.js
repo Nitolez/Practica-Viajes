@@ -60,7 +60,7 @@ añadir sólo dos imagenes */
     const idVallecas = document.querySelector('#vallecas')
     const imagenVallecas = document.createElement("img")
     let indiceVallecas = 0
-    //Hago una funcion para cambiar la imagen del array segun el indice
+    //Hago una funcion para que la source cambie en función del indice del array
     function cambiarImagenArray(){
         imagenVallecas.src = arrayVallecas[indiceVallecas]
     }
