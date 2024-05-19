@@ -78,3 +78,14 @@ añadir sólo dos imagenes */
         cambiarImagenArray()
     })
 
+//Añadir una lista de opciones al final de la pagina
+    //Añado el form
+    const formulario = document.createElement("form")
+    const label = document.createElement("label")
+    const input = document.createElement("input")
+    const datalist = document.createElement("datalist")
+    const destinos = document.querySelector("destinos")
+    //Creo una función para crar elementos más comodamente
+    function crearElemento (elemento, idDestino) {
+        idDestino.appendChild(elemento)
+    }
