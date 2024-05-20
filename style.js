@@ -15,7 +15,7 @@ const random = (array) => {
     //Añadir el alt a las imagenes
     añadirImagenBanner.alt = "Banner con imagenes de viajes"
     //Añadir imagen al contenedor
-    idBanner.appendChild(añadirImagenBanner)
+    idBanner.append(añadirImagenBanner)
 
     //Para que se cambie haciendo click
     añadirImagenBanner.addEventListener("click", function() {
@@ -30,7 +30,7 @@ const random = (array) => {
 
     añadirImagenCanarias.src = 'viajes/viajes-1.jpg'
     añadirImagenCanarias.alt = 'Una bonita imagen de canarias'
-    idCanarias.appendChild(añadirImagenCanarias)
+    idCanarias.append(añadirImagenCanarias)
 
     añadirImagenCanarias.addEventListener("click", function(){
         añadirImagenCanarias.src = random(arrayCanarias)
@@ -44,7 +44,7 @@ añadir sólo dos imagenes */
 
     imgPuntaCana.src = 'viajes/viajes-3.jpg';
     imgPuntaCana.alt = 'Una bonita imagen de Punta Cana';
-    idPuntaCana.appendChild(imgPuntaCana);
+    idPuntaCana.append(imgPuntaCana);
 
     imgPuntaCana.addEventListener("click", function(){
         if (imgPuntaCana.src.includes("viajes/viajes-3.jpg")) {
@@ -66,7 +66,7 @@ añadir sólo dos imagenes */
     }
     //Invoco la función y mostramos la primera imagen
     cambiarImagenArray()
-    idVallecas.appendChild(imagenVallecas)
+    idVallecas.append(imagenVallecas)
     //Hacemos un evento para que cambie al hacer click estableciendo el máximo del array
     imagenVallecas.addEventListener("click", function(){
         if(indiceVallecas > 1){
@@ -103,7 +103,7 @@ añadir sólo dos imagenes */
     opciones.forEach(opcion => {
         const option = document.createElement("option");
         option.value = opcion;
-        datalist.appendChild(option);
+        datalist.append(option);
     });
 
     // Asegúrate de que el contenedor 'destinos' existe en el DOM
@@ -116,9 +116,9 @@ añadir sólo dos imagenes */
         }
 
         // Añadir elementos al formulario
-        formulario.appendChild(label);
-        formulario.appendChild(input);
-        formulario.appendChild(datalist);
+        formulario.append(label);
+        formulario.append(input);
+        formulario.append(datalist);
 
         // Añadir el formulario al contenedor 'destinos'
         crearElemento(formulario, contenedorDestinos);
