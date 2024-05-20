@@ -124,4 +124,24 @@ añadir sólo dos imagenes */
         crearElemento(formulario, contenedorDestinos);
     } else {
     }
+//Hacer un array multidimensional desestructurado
+const arrayDesestructurado  = [
+    ["imagen1.jpg", "Nombre de la Imagen 1", "Texto Alternativo 1"],
+    ["imagen2.jpg", "Nombre de la Imagen 2", "Texto Alternativo 2"],
+    ["imagen3.jpg", "Nombre de la Imagen 3", "Texto Alternativo 3"],
+    ["imagen4.jpg", "Nombre de la Imagen 4", "Texto Alternativo 4"],
+    ["imagen5.jpg", "Nombre de la Imagen 5", "Texto Alternativo 5"],
+    ["imagen6.jpg", "Nombre de la Imagen 6", "Texto Alternativo 6"]
+];
 
+function convertirArrayMultidimensional(imagenes) {
+    let imagenesConvertidas = [];
+    for (let i = 0; i < imagenes.length; i++) {
+        let [src, textoImg, alt] = imagenes[i];
+        imagenesConvertidas.push({ src, textoImg, alt });
+    }
+    return imagenesConvertidas;
+}
+
+let imagenesConvertidas = convertirArrayMultidimensional(imagenes);
+console.log(imagenesConvertidas);
