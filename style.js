@@ -134,14 +134,16 @@ const arrayDesestructurado  = [
     ["imagen6.jpg", "Nombre de la Imagen 6", "Texto Alternativo 6"]
 ];
 
-function convertirArrayMultidimensional(imagenes) {
-    let imagenesConvertidas = [];
-    for (let i = 0; i < imagenes.length; i++) {
-        let [src, textoImg, alt] = imagenes[i];
-        imagenesConvertidas.push({ src, textoImg, alt });
-    }
-    return imagenesConvertidas;
-}
+const [src, textoImg, alt] = arrayDesestructurado[0]
 
-let imagenesConvertidas = convertirArrayMultidimensional(imagenes);
-console.log(imagenesConvertidas);
+   function convertirArrayMultidimensional(imagenes) {
+       let imagenesConvertidas = [];
+       for (let i = 0; i < imagenes.length; i++) {
+           let [src, textoImg, alt] = imagenes[i];
+           imagenesConvertidas.push({ src, textoImg, alt });
+       }
+       return imagenesConvertidas;
+   }
+   
+   let imagenesConvertidas = convertirArrayMultidimensional(imagenes);
+   console.log(imagenesConvertidas);
