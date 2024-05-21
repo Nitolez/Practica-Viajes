@@ -134,7 +134,7 @@ const arrayDesestructurado  = [
     ["imagen6.jpg", "Nombre de la Imagen 6", "Texto Alternativo 6"]
 ];
 
-const [src, textoImg, alt] = arrayDesestructurado[0]
+const [src, textoImg, alt] = arrayDesestructurado
 
    function convertirArrayMultidimensional(imagenes) {
        let imagenesConvertidas = [];
