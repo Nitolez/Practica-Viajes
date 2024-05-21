@@ -2,7 +2,7 @@
 const random = (array) => {
  return array[Math.floor(Math.random() * array.length)];
 }
-
+ 
 //BANNER: Aleatorio al click
     //Array de imagenes de banner
     const arrayBanner = ['banner/1.jpg', 'banner/2.jpg', 'banner/3.jpg', 'banner/4.jpg', 'banner/5.jpg', 'banner/6.jpg', 'banner/7.jpg', 'banner/8.jpg']
